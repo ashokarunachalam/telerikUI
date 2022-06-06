@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ErrorClassifier>
+    <ErrorCategories>
+        <ErrorCategory>
+            <Name>AccessDenied</Name>
+            <ErrorStrings>
+                <string>Error 1303. The installer has insufficient privileges to access this directory:</string>
+                <string>Error 1304. Error writing to file:</string>
+                <string>Error 1305. Error reading from file</string>
+                <string>Error 1306. Another application has exclusive access to the file </string>
+                <string>Error 1310. Error writing to file:</string>
+                <string>Error 1321. The Installer has insufficient privileges to modify this file:</string>
+                <string>Error 1606. Could not access network location</string>
+                <string>Error 1406. Could not write value </string>
+                <string>MainEngineThread is returning 1620</string>
+                <string>The Default software restriction user policy default security level disallows execution.</string>
+                <string>Error 1926. Could not set file security</string>
+                <string>MainEngineThread is returning 110</string>
+                <string>DEBUG: Error 2329:  Error deleting file: </string>
+            </ErrorStrings>
+            <ErrorOverview>Setup failed due to insufficient privileges.</ErrorOverview>
+            <Solution>Please ensure your windows user account as well as the LocalSystem built in account have the necessary priviliges to perform installations.</Solution>
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>BuildCache</Name>
+            <ErrorStrings>
+                <string>Building Cache
+Exception thrown by custom action:</string>
+                <string>Telerik.Deployment.ResourceUninstallation.CacheManager.WriteCache\(Cache cache, String directoryPath, Session session\)</string>
+                <string>Begin Building Cache
+Installation cannot proceed. Could not find file</string>
+                <string>Begin Building Cache
+Installation cannot proceed. The process cannot access the file</string>
+            </ErrorStrings>
+            <ErrorOverview>Setup failed while attempting to install a large volume of files.</ErrorOverview>
+            <Solution>The issue can be avoided by attempting another install with the Local Demos feature turned off. Contact Telerik support for additional assistance.</Solution>
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>ChangeFolderPermissions</Name>
+            <ErrorStrings>
+                <string>ExecSecureObjects:  Error 0x80070003: failed to get security info for object:</string>
+                <string>ExecSecureObjects:  Error 0x80070005: failed to get security info for object:</string>
+                <string>SchedSecureObjectsRollback returned actual error code 1603</string>
+            </ErrorStrings>
+            <ErrorOverview>Setup failed due to insufficient privileges.</ErrorOverview>
+            <Solution>Please ensure your windows user account as well as the LocalSystem built in account have the necessary priviliges to perform installations.</Solution>
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>ConcurrentInstall</Name>
+            <ErrorStrings>
+                <string>Failed to grab execution mutex. System error 258.</string>
+                <string>MainEngineThread is returning 1618</string>
+            </ErrorStrings>
+            <ErrorOverview>Setup failed due to another running installation process on your system.</ErrorOverview>
+            <Solution>Retry your installation later or after a system reboot.</Solution>
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>ControlPanelNotificationsScheduler</Name>
+            <ErrorStrings>
+                <string>Error: could not load custom action class NotificationsScheduler.CustomActions from assembly: NotificationsScheduler</string>
+                <string>CustomAction ScheduleNotifications returned actual error code 1603</string>
+                <string>CustomAction CheckForExistingNotificationSchedule returned actual error code 1603</string>
+            </ErrorStrings>
+            <!--No useful error classification for customers as we are not aware of any solution for the issue.-->
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>CreateInternetShortcuts</Name>
+            <ErrorStrings>
+                <string>WixCreateInternetShortcuts returned actual error code 1603</string>
+            </ErrorStrings>
+            <!--No useful error classification for customers as we are not aware of any solution for the issue.-->
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>CreateTempFile</Name>
+            <ErrorStrings>
+                <string>Error 1336. There was an error creating a temporary file that is needed to complete this installation.</string>
+            </ErrorStrings>
+            <!--No useful error classification for customers as we are not aware of any solution for the issue.-->
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>DiskSpace</Name>
+            <ErrorStrings>
+                <string>Disk full: Out of disk space</string>
+                <string>Installation cannot proceed. There is not enough space on the disk.</string>
+                <string>Begin UnpackResource
+Installation cannot proceed. Not enough storage is available to process this command.</string>
+                <string>Error 1307. There is not enough disk space to install this file:</string>
+                <string>MainEngineThread is returning 112</string>
+                <string>Installation cannot proceed. There is not enough space on the disk.</string>
+                <string>Begin UnpackResource
+Installation cannot proceed. Espacio en disco insuficiente.</string>
+                <string>Installation cannot proceed. Not enough storage is available to process this command.</string>
+                <string>Error 1711. An error occurred while writing installation information to disk.</string>
+                <string>Disk full: There is not enough disk space on the volume</string>
+            </ErrorStrings>
+            <ErrorOverview>Setup failed due to insufficient disk space.</ErrorOverview>
+            <Solution>Please ensure you have enough free space on your system drive as well as the drive where your installation is taking place.</Solution>
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>DotNet</Name>
+            <ErrorStrings>
+                <string>OperationTitle: Installing Microsoft .NET Framework 4.0 RTM</string>
+                <string>OperationTitle: Installing Microsoft .NET Framework 3.5 SP1</string>
+                <string>OperationTitle: Installing Microsoft .NET Framework 4.5</string>
+                <string>Installing .Net Framework 4 hotfix</string>
+            </ErrorStrings>
+            <ErrorOverview>Installation of Microsoft .NET Framework prerequisite has failed.</ErrorOverview>
+            <Solution>Please install Microsoft .NET Framework before attempting another install.</Solution>
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>GAC</Name>
+            <ErrorStrings>
+                <string>An error occurred during the installation of assembly</string>
+            </ErrorStrings>
+            <ErrorOverview>Setup failed to add assemblies to Global Assembly Cache.</ErrorOverview>
+            <Solution>Please ensure your .NET Framework installation is intact.</Solution>
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>InitiateCustomAction</Name>
+            <ErrorStrings>
+                <string>SFXCA: RUNDLL32 returned error code:</string>
+                <string>SFXCA: Failed to create new CA process via RUNDLL32.</string>
+                <string>SFXCA: Failed to get requested CLR info. Error code 0x80131700</string>
+                <string>SFXCA: Failed to extract to temporary directory. Cabinet error code</string>
+                <string>SFXCA: Failed to start the CLR. Error code 0x80070057</string>
+                <string>SFXCA: Failed to start the CLR. Error code 0x80070005</string>
+                <string>Error 1723. There is a problem with this Windows Installer package. A DLL required for this install to complete could not be run. Contact your support personnel or package vendor.</string>
+            </ErrorStrings>
+            <ErrorOverview>Setup failed due to an unknown Windows Installer issue.</ErrorOverview>
+            <Solution>Retry your installation after a system reboot.</Solution>
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>InstallationForbidden</Name>
+            <ErrorStrings>
+                <string>Info 1625.This installation is forbidden by system policy. Contact your system administrator.</string>
+                <string>MainEngineThread is returning 1625</string>
+            </ErrorStrings>
+            <ErrorOverview>This installation is forbidden by system policy.</ErrorOverview>
+            <Solution>Contact your system administrator.</Solution>
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>InsufficientSystemResources</Name>
+            <ErrorStrings>
+                <string>System error 1450</string>
+            </ErrorStrings>
+            <!--No useful error classification for customers as we are not aware of any solution for the issue.-->
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>InvalidCommandLineArguments</Name>
+            <ErrorStrings>
+                <string>MainEngineThread is returning 1639</string>
+            </ErrorStrings>
+            <!--No useful error classification for customers as we are not aware of any solution for the issue.-->
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>InvalidInstallLocation</Name>
+            <ErrorStrings>
+                <string>Error 1327. Invalid Drive:</string>
+                <string>Error 1324. The folder path</string>
+                <string>Installation cannot proceed. Could not find a part of the path</string>
+                <string>Installation cannot proceed. No se puede encontrar una parte de la ruta de acceso</string>
+            </ErrorStrings>
+            <ErrorOverview>An invalid path was set for an installation folder.</ErrorOverview>
+            <Solution>Please input a valid path.</Solution>
+        </ErrorCategory>
+        <ErrorCategory>
+          <Name>DeployKendoScaffolding</Name>
+          <ErrorStrings>
+            <string>DeployScaffoldingVS2013 returned actual error code</string>
+            <string>DeployScaffoldingVS2015 returned actual error code</string>
+          </ErrorStrings>
+          <ErrorOverview>Failed to deploy Kendo UI Scaffolder in Visual Studio.</ErrorOverview>
+          <Solution>Please try to manually uninstall the Kendo UI Scaffolder extension from Visual Studio 2013 and later.</Solution>
+        </ErrorCategory>
+        <ErrorCategory>
+          <Name>RemoveKendoScaffolding</Name>
+          <ErrorStrings>
+            <string>RemoveScaffoldingVS2013 returned actual error code</string>
+            <string>RemoveScaffoldingVS2015 returned actual error code</string>
+          </ErrorStrings>
+          <ErrorOverview>Failed to remove Kendo UI Scaffolder in Visual Studio.</ErrorOverview>
+          <Solution>Please try to manually uninstall the Kendo UI Scaffolder extension from Visual Studio 2013 and later.</Solution>
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>KendoScaffoldingVsix</Name>
+            <ErrorStrings>
+                <string>A program required for this install to complete could not be run. Contact your support personnel or package vendor. Action: RemoveScaffoldingVS2013</string>
+            </ErrorStrings>
+            <!--No useful error classification for customers as we are not aware of any solution for the issue.-->
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>LaunchCondition</Name>
+            <ErrorStrings>
+                <string>This application requires .NET Framework 4.0 or higher. Please install the .NET Framework then run this installer again.</string>
+                <string>This setup requires the .NET Framework 2.0 or higher.</string>
+                <string>LaunchConditions. Return value 3.</string>
+            </ErrorStrings>
+            <ErrorOverview>Setup failed due to missing required software.</ErrorOverview>
+            <Solution>Please ensure you have all required software installed and attempt another install.</Solution>
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>LockedFiles</Name>
+            <ErrorStrings>
+                <string>Begin UnpackResource
+Installation cannot proceed. The process cannot access the file</string>
+                <string>Begin UninstallResources
+Unable to delete</string>
+                <string>Calling custom action DeleteFolderCA!DeleteFolderCA.CustomAction.DeleteFolder
+Unable to delete</string>
+            </ErrorStrings>
+            <ErrorOverview>Setup failed due to locked files on the system.</ErrorOverview>
+            <Solution>Please make sure there are no Visual Studio instances or Telerik demo applications running before attempting another install.</Solution>
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>MsiDecompressionFailed</Name>
+            <ErrorStrings>
+                <string>Error 1335. The cabinet file</string>
+            </ErrorStrings>
+            <!--No useful error classification for customers as we are not aware of any solution for the issue.-->
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>MissingFeature</Name>
+            <ErrorStrings>
+                <string>The error code is 2711</string>
+            </ErrorStrings>
+            <!--No useful error classification for customers as we are not aware of any solution for the issue.-->
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>MsiFileNeeded</Name>
+            <ErrorStrings>
+                <string>Error 1316. A network error occurred while attempting to read from the file:</string>
+                <string>Source is invalid due to missing/inaccessible package.</string>
+            </ErrorStrings>
+            <ErrorOverview>Setup failed due to installer file name being changed since initial installation.</ErrorOverview>
+            <Solution>The issue can be avoided by uninstalling any old product versions before attempting another install.</Solution>
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>MsiLogFileLocked</Name>
+            <ErrorStrings>
+                <string>MainEngineThread is returning 1622</string>
+            </ErrorStrings>
+            <ErrorOverview>Installation log file locked.</ErrorOverview>
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>MvcTools</Name>
+            <ErrorStrings>
+                <string>OperationTitle: Installing ASP.NET MVC 3</string>
+                <string>OperationTitle: Installing ASP.NET MVC 4</string>
+            </ErrorStrings>
+            <ErrorOverview>Installation of ASP.NET MVC prerequisite has failed.</ErrorOverview>
+            <Solution>Please install ASP.NET MVC before attempting another install.</Solution>
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>PackageError</Name>
+            <ErrorStrings>
+                <string>MainEngineThread is returning 1619</string>
+            </ErrorStrings>
+            <!--No useful error classification for customers as we are not aware of any solution for the issue.-->
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>PrimaryInteropAssemblies</Name>
+            <ErrorStrings>
+                <string>OperationTitle: Installing Microsoft Visual Studio 2005 Primary Interop Assemblies</string>
+            </ErrorStrings>
+            <ErrorOverview>Installation of Microsoft Visual Studio 2005 Primary Interop Assemblies prerequisite has failed.</ErrorOverview>
+            <Solution>Please install Microsoft Visual Studio 2005 Primary Interop Assemblies before attempting another install.</Solution>
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>ProductAlreadyInstalled</Name>
+            <ErrorStrings>
+                <string>MainEngineThread is returning 1604</string>
+            </ErrorStrings>
+            <!--No useful error classification for customers as we are not aware of any solution for the issue.-->
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>RemoveHKLMToolboxEntries</Name>
+            <ErrorStrings>
+                <string>CustomAction RemoveHKLMToolboxEntries returned actual error code 1603</string>
+                <string>Calling custom action ToolboxRelatedCA!ToolboxRelatedCA.CustomActions.RemoveHKLMToolboxEntries
+ToolboxRelated: Removing failed.</string>
+            </ErrorStrings>
+            <!--No useful error classification for customers as we are not aware of any solution for the issue.-->
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>ReportingSamples</Name>
+            <ErrorStrings>
+                <string>at TelerikReporting.TelerikReportingCA.ConfigSamples\(Session session\)</string>
+                <string>CustomAction ConfigureSamples returned actual error code 1603</string>
+                <string>CustomAction CreateDatabase returned actual error code 1603</string>
+            </ErrorStrings>
+            <!--No useful error classification for customers as we are not aware of any solution for the issue.-->
+        </ErrorCategory>
+        <ErrorCategory>
+          <Name>ReportServerMetadataBackup</Name>
+          <ErrorStrings>
+            <string>RunMetadataBackupScript. Return value 3.</string>
+          </ErrorStrings>
+          <ErrorOverview>Setup failed to backup Report Server storage.</ErrorOverview>
+          <Solution>Please review the backup log in the Backup folder under Report Server installation directory for additional details.</Solution>
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>ReportServerServiceAgent</Name>
+            <ErrorStrings>
+                <string>ExecSecureObjects:  Error 0x80070430: failed to set security info for object: Telerik.ReportServer.ServiceAgent</string>
+                <string>'Telerik.ReportServer.ServiceAgent' \(Telerik.ReportServer.ServiceAgent\) could not be installed.  Verify that you have sufficient privileges to install system services.</string>
+                <string>ExecSecureObjects:  Error 0x80070424: failed to get security info for object: Telerik.ReportServer.ServiceAgent</string>
+            </ErrorStrings>
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>SFConfigureProject</Name>
+            <ErrorStrings>
+                <string>A critical error occurred while configuring the Sitefinity project manager.</string>
+                <string>Telerik.Sitefinity.Installer.Actions.CustomAction.GetSitefinityUrl\(String startupConfigFile\)</string>
+                <string>The custom action completed successfully.
+CustomAction ConfigureSitefinityProject returned actual error code 1603</string>
+            </ErrorStrings>
+            <!--No useful error classification for customers as we are not aware of any solution for the issue.-->
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>SFThunderInstaller</Name>
+            <ErrorStrings>
+                <string>The installation has crashed
+Installer message:The remote server returned an unexpected response:</string>
+                <string>The installation has crashed
+Installer message:El servidor remoto devolvi� una respuesta inesperada:</string>
+                <string>The system cannot find the file specified
+CustomAction StartThunderUninstaller returned actual error code 1603</string>
+                <string>The installation has crashed
+Installer message:There was no endpoint listening</string>
+                <string>The installation has crashed
+Installer message:An error occurred while receiving the HTTP response to</string>
+                <string>CustomAction DownloadThunderInstaller returned actual error code 1603</string>
+            </ErrorStrings>
+            <!--No useful error classification for customers as we are not aware of any solution for the issue.-->
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>SLTools</Name>
+            <ErrorStrings>
+                <string>OperationTitle: Installing Silverlight 5 Tools</string>
+            </ErrorStrings>
+            <ErrorOverview>Installation of Silverlight 5 prerequisite has failed.</ErrorOverview>
+            <Solution>Please install Silverlight 5 before attempting another install.</Solution>
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>SPInstallSolution</Name>
+            <ErrorStrings>
+                <string>
+                    Begin installing Sharepoint solution.
+                    Failed installing Sharepoint solution.
+                </string>
+                <string>
+                    Begin installing Sharepoint solution.
+                    Exception thrown by custom action:
+                </string>
+            </ErrorStrings>
+            <!--No useful error classification for customers as we are not aware of any solution for the issue.-->
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>SPShellAdmin</Name>
+            <ErrorStrings>
+                <string>Begin EnsureSPShellAdmin
+Exception thrown by custom action:</string>
+            </ErrorStrings>
+            <!--No useful error classification for customers as we are not aware of any solution for the issue.-->
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>SPTimerService</Name>
+            <ErrorStrings>
+                <string>Setup detected that the Sharepoint Timer service is not running. Setup requires that the Sharepoint Timer service is running.</string>
+            </ErrorStrings>
+            <ErrorOverview>Setup detected that the Sharepoint Timer service is not running.</ErrorOverview>
+            <Solution>Please ensure the Sharepoint Timer service is running before attempting another install.</Solution>
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>SPUninstallSolution</Name>
+            <ErrorStrings>
+                <string>Begin uninstalling Sharepoint solution.
+Exception thrown by custom action:</string>
+                <string>Begin uninstalling Sharepoint solution.
+Failed uninstalling Sharepoint solution.</string>
+                <string>CustomAction UninstallSPSolution returned actual error code 1603</string>
+            </ErrorStrings>
+            <ErrorOverview>Setup failed to uninstall the Telerik SharePoint solution.</ErrorOverview>
+            <Solution>Please try to manually uninstall the existing Telerik SharePoint web parts before attempting another install.</Solution>
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>SQLServer</Name>
+            <ErrorStrings>
+                <string>OperationTitle: Installing SQL Server 2008 R2 Express SP1 \(x64\)</string>
+                <string>OperationTitle: Installing SQL Server 2008 R2 Express SP1 \(x86\)</string>
+            </ErrorStrings>
+            <ErrorOverview>Installation of Microsoft SQL Server 2008 R2 Express SP1 has failed.</ErrorOverview>
+            <Solution>Please install Microsoft SQL Server 2008 R2 Express SP1 before attempting another install.</Solution>
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>TempFolder</Name>
+            <ErrorStrings>
+                <string>MainEngineThread is returning 1632</string>
+            </ErrorStrings>
+            <ErrorOverview>Temp folder full or inaccessible.</ErrorOverview>
+            <Solution>Please verify that the temp folder exists, is not full and you can write to it.</Solution>
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>TestingFrameworkInstalled</Name>
+            <ErrorStrings>
+                <string>Telerik Testing Framework is already installed as a part of Telerik Test Studio.</string>
+            </ErrorStrings>
+            <ErrorOverview>Telerik Testing Framework is already installed as a part of Telerik Test Studio.</ErrorOverview>
+            <Solution>No further action is required. Please excuse the inconvenience caused.</Solution>
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>TPEnsureLocalSystemPermissions</Name>
+            <ErrorStrings>
+                <string>DatabaseExtensions.CustomActions.EnsureLocalSystemPermissionsInTeamPulse\(Session session\)</string>
+            </ErrorStrings>
+            <ErrorOverview>Setup failed to ensure database permissions for the LocalSystem built in account.</ErrorOverview>
+            <Solution>Please check your database permissions. Contact Telerik support for additional assistance.</Solution>
+        </ErrorCategory>
+        <ErrorCategory>
+          <Name>TPIIS</Name>
+          <ErrorStrings>
+            <string>ValidateIISSilentInstall. Return value 3</string>
+            <string>OperationTitle: Installing TeamPulse IIS Configuration</string>
+          </ErrorStrings>
+          <!--No useful error classification for customers as we are not aware of any solution for the issue.-->
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>ReportServerIISConfiguration</Name>
+            <ErrorStrings>
+                <string>RunIISConfigurationDism returned actual error code 1603</string>
+                <string>WriteIIS7ConfigChanges returned actual error code 1603</string>
+            </ErrorStrings>
+            <SubErrorCategories>
+              <ErrorCategory>
+                <Name>ReportServerIISConfigurationRestartNeeded</Name>
+                <ErrorStrings>
+                    <string>CustomAction RunIISConfigurationDism ended with ExitCode 3010</string>
+                    <string>CustomAction RunIISConfigurationDism ended with ExitCode 3017</string>
+                </ErrorStrings>
+              </ErrorCategory>
+            </SubErrorCategories>
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>UninstallResource</Name>
+            <ErrorStrings>
+                <string>Begin UninstallResources
+Exception thrown by custom action:</string>
+                <string>Begin UninstallResources
+CustomAction UninstallExamples returned actual error code 1603</string>
+                <string>Begin UninstallResources
+CustomAction UninstallScriptsAndSkins returned actual error code 1603</string>
+                <string>Error: could not load custom action class Telerik.Deployment.ResourceUninstallation.CustomAction</string>
+                <string>CustomAction UninstallFrameworkDemos.[0-9A-F]{8}_[0-9A-F]{4}_[0-9A-F]{4}_[0-9A-F]{4}_[0-9A-F]{12} returned actual error code 1603</string>
+            </ErrorStrings>
+            <!--No useful error classification for customers as we are not aware of any solution for the issue.-->
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>UnpackZipResource</Name>
+            <ErrorStrings>
+                <string>Begin UnpackResource
+Exception thrown by custom action:</string>
+                <string>Begin UnpackResource
+CustomAction InstallLiveDemos returned actual error code 1603</string>
+                <string>Begin UnpackResource
+CustomAction InstallExamples returned actual error code 1603</string>
+                <string>Begin UnpackResource
+CustomAction InstallScriptsAndSkins returned actual error code 1603</string>
+                <string>Begin UnpackResource
+Installation cannot proceed</string>
+            </ErrorStrings>
+            <ErrorOverview>Setup failed while attempting to install a large volume of files.</ErrorOverview>
+            <Solution>The issue can be avoided by attempting another install with the Local Demos feature turned off. Contact Telerik support for additional assistance.</Solution>
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>UpgradeIssues</Name>
+            <ErrorStrings>
+                <string>PreventInstall. Return value 3.</string>
+                <string>PreventDowngrading. Return value 3.</string>
+                <string>Error 1714</string>
+            </ErrorStrings>
+            <!--No useful error classification for customers as we are not aware of any solution for the issue.-->
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>VCRedist</Name>
+            <ErrorStrings>
+                <string>OperationTitle: Installing Microsoft Visual C\+\+ 2010 SP1 \(x86\) MFC Security Update</string>
+                <string>OperationTitle: Installing Microsoft Visual C\+\+ 2010 SP1 \(x64\) MFC Security Update</string>
+            </ErrorStrings>
+            <ErrorOverview>Installation of Microsoft Visual C\+\+ 2010 SP1 prerequisite has failed.</ErrorOverview>
+            <Solution>Please install Microsoft Visual C\+\+ 2010 SP1 before attempting another install.</Solution>
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>VS2008Templates</Name>
+            <ErrorStrings>
+                <string>Custom action failed. Unable to setup Visual Studio 2008 templates.</string>
+                <string>Please, repair Visual Studio 2008 or disable the Visual Studio 2008 integration feature before attempting another install.</string>
+            </ErrorStrings>
+            <ErrorOverview>Setup failed to install Visual Studio 2008 tempplates.</ErrorOverview>
+            <Solution>Please, repair Visual Studio 2008 or disable the Visual Studio 2008 integration feature before attempting another installation.</Solution>
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>WindowsInstallerBroken</Name>
+            <ErrorStrings>
+                <string>Cannot begin transaction. Global mutex not properly initialized.</string>
+                <string>MainEngineThread is returning 1601</string>
+                <string>Error 1719. The Windows Installer Service could not be accessed. This can occur if the Windows Installer is not correctly installed. Contact your support personnel for assistance.</string>
+                <string>Installation cannot proceed. Insufficient system resources exist to complete the requested service.</string>
+                <string>Internal MSI error. Installer terminated prematurely.</string>
+                <string>Error 2350:  FDI Server Error</string>
+                <string>The error code is 2350. The arguments are:</string>
+                <string>The error code is 2350. The arguments are: , ,</string>
+            </ErrorStrings>
+            <ErrorOverview>Windows Installer service could not be accessed.</ErrorOverview>
+            <Solution>Unregister and re-register Windows Installer service. Reboot the system.</Solution>
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>WindowsInstallerCache</Name>
+            <ErrorStrings>
+                <string>The error code is 2203</string>
+                <string>Error 1101. Error reading from file:</string>
+            </ErrorStrings>
+            <!--No useful error classification for customers as we are not aware of any solution for the issue.-->
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>WindowsInstallerSecurityUpdate</Name>
+            <ErrorStrings>
+                <string>SECUREREPAIR: SecureRepair Failed. Error code:</string>
+            </ErrorStrings>
+            <!--No useful error classification for customers as we are not aware of any solution for the issue.-->
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>UpdateVSConfiguration</Name>
+            <ErrorStrings>
+                <string>DevenvUpdateConfiguration2017Enterprise returned actual error code</string>
+                <string>DevenvUpdateConfiguration2017Professional returned actual error code</string>
+                <string>DevenvUpdateConfiguration2017Community returned actual error code</string>
+            </ErrorStrings>
+            <ErrorOverview>Notify Visual Studio to merge the Visual Studio packages failure.</ErrorOverview>
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>CheckDotNetCoreSDKInstalled</Name>
+            <ErrorStrings>
+                <string>CheckDotNetCoreSDKInstalled. Return value 3</string>
+            </ErrorStrings>
+            <!--No useful error classification for customers as we are not aware of any solution for the issue.-->
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>NetFxScheduleNativeImage</Name>
+            <ErrorStrings>
+                <string>CustomAction NetFxScheduleNativeImage returned actual error code 1603</string>
+                <string>NetFxScheduleNativeImage. Return value 3</string>
+            </ErrorStrings>
+            <!--No useful error classification for customers as we are not aware of any solution for the issue.-->
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>DetectSupported2017Instances</Name>
+            <ErrorStrings>
+                <string>DetectSupported2017Instances. Return value 3</string>
+                <string>CustomAction DetectSupported2017Instances returned actual error code 1603</string>
+            </ErrorStrings>
+            <!--No useful error classification for customers as we are not aware of any solution for the issue.-->
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>RemoveVSIXFolderCA</Name>
+            <ErrorStrings>
+                <string>CustomAction RemoveVSIXFolderCA.[0-9A-F]{8}_[0-9A-F]{4}_[0-9A-F]{4}_[0-9A-F]{4}_[0-9A-F]{12} returned actual error code 1603</string>
+            </ErrorStrings>
+            <!--No useful error classification for customers as we are not aware of any solution for the issue.-->
+        </ErrorCategory>
+        <ErrorCategory>
+            <Name>InvalidShortFileName</Name>
+            <ErrorStrings>
+                <string>Error 1325</string>
+            </ErrorStrings>
+            <!--No useful error classification for customers as we are not aware of any solution for the issue.-->
+        </ErrorCategory>
+    </ErrorCategories>    
+</ErrorClassifier>

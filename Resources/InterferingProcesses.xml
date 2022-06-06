@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ProcessClassifier>
+    <InterferingProcesses>
+        <InterferingProcess ProcessName="devenv" ApplicationName="Microsoft Visual Studio">
+            <AffectedProducts>
+                <ProductCode>RCAJAX</ProductCode>
+                <ProductCode>RCSL</ProductCode>
+                <ProductCode>RCWPF</ProductCode>
+                <ProductCode>RCWF</ProductCode>
+                <ProductCode>KENDOUICOMPLETE</ProductCode>
+                <ProductCode>KENDOUIMVC</ProductCode>
+                <ProductCode>KENDOUITRIAL</ProductCode>
+                <ProductCode>REPORTING</ProductCode>
+                <ProductCode>JUSTMOCK</ProductCode>
+                <ProductCode>UIXAM</ProductCode>
+                <ProductCode>TESTSTUDIOLOAD</ProductCode>
+                <ProductCode>TESTSTUDIOFUNCTIONAL</ProductCode>
+                <ProductCode>TESTSTUDIOULTIMATE</ProductCode>
+                <ProductCode>TESTSTUDIOFWK</ProductCode>
+                <ProductCode>UIASPCORE</ProductCode>
+            </AffectedProducts>
+        </InterferingProcess>
+        <InterferingProcess ProcessName="Telerik.TestStudio" ApplicationName="Telerik Test Studio">
+            <AffectedProducts>
+                <ProductCode>TESTSTUDIOLOAD</ProductCode>
+                <ProductCode>TESTSTUDIOFUNCTIONAL</ProductCode>
+                <ProductCode>TESTSTUDIOULTIMATE</ProductCode>
+                <ProductCode>TESTSTUDIOAPI</ProductCode>
+            </AffectedProducts>
+        </InterferingProcess>
+    </InterferingProcesses>
+</ProcessClassifier>
